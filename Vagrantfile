@@ -12,10 +12,10 @@ Vagrant.configure(2) do |config|
     vb.customize ['modifyvm', :id, '--usb', 'on']
     vb.customize ['usbfilter', 'add', '0', '--target', :id, '--name', 'Lattice FTUSB Interface Cable', '--vendorid', '0x0403', '--productid', '0x6010']
   end
-   
+
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
-    sudo apt-get install -y build-essential clang bison flex libreadline-dev gawk tcl-dev libffi-dev git mercurial graphviz xdot pkg-config python python3 libftdi-dev
+    sudo apt-get install -y build-essential clang bison flex libreadline-dev gawk tcl-dev libffi-dev git mercurial graphviz xdot pkg-config python python3 libftdi-dev iverilog
 
     cd /tmp
     git clone https://github.com/cliffordwolf/icestorm.git icestorm
