@@ -20,18 +20,21 @@ Vagrant.configure(2) do |config|
     cd /tmp
     git clone https://github.com/cliffordwolf/icestorm.git icestorm
     cd /tmp/icestorm
+    git checkout 49e3ad404a28faa1dbcbbc0acf3071bec3d5ddfe
     make -j2
     make install
 
     cd /tmp
     git clone https://github.com/cseed/arachne-pnr.git arachne-pnr
     cd /tmp/arachne-pnr
+    git checkout 6b8336497800782f2f69572d40702b60423ec67f
     make -j2
     make install
 
     cd /tmp
     git clone https://github.com/cliffordwolf/yosys.git yosys
     cd yosys
+    git checkout 99edf249669158b8c8bef0c7c3b926a2bbb7a621
     make -j2
     make install
    SHELL
